@@ -1,13 +1,12 @@
 {
-  "name": "fastshell",
-  "title": "Fiercely quick and opinionated front-ends",
-  "author": "Hossein Karami",
-  "url": "https://HosseinKarami.github.io/fastshell",
-  "version": "1.0.5",
-  "license": "MIT",
+  "name": "Kelp",
+  "title": "Kelp",
+  "author": "Aaron Adler",
+  "url": "https://lightyear.io",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/HosseinKarami/fastshell.git"
+    "url": "https://github.com/aarnadlr/kelp.git"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",

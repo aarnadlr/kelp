@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     header  = require('gulp-header'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
-    sourcemaps = require('gulp-sourcemaps'),
+    // sourcemaps = require('gulp-sourcemaps'),
     package = require('./package.json');
 
 
@@ -19,28 +19,28 @@ var banner = [
   ' * <%= package.url %>\n' +
   ' * @author <%= package.author %>\n' +
   ' * @version <%= package.version %>\n' +
-  ' * Copyright ' + new Date().getFullYear() + '. <%= package.license %> licensed.\n' +
+  ' * Copyright ' + new Date().getFullYear() +
   ' */',
   '\n'
 ].join('');
 
 gulp.task('css', function () {
     return gulp.src('src/scss/style.scss')
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 4 version'))
     .pipe(gulp.dest('app/assets/css'))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min' }))
     .pipe(header(banner, { package : package }))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('js',function(){
   gulp.src('src/js/scripts.js')
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(header(banner, { package : package }))
@@ -49,13 +49,14 @@ gulp.task('js',function(){
     .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
     .pipe(header(banner, { package : package }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/assets/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
 });
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
+        notify: false,
         server: {
             baseDir: "app"
         }
