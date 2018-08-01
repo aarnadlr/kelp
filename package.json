@@ -1,6 +1,8 @@
 {
   "name": "Kelp",
   "title": "Kelp",
+  "description": "Kelp Landing Page",
+  "license": "Copyright 2018 Lightyear.io",
   "author": "Aaron Adler",
   "url": "https://lightyear.io",
   "version": "1.0.0",
@@ -23,6 +25,8 @@
     "jshint": "^2.8.0"
   },
   "dependencies": {
-    "gulp-haml": "^1.0.1"
+    "gulp-haml": "^1.0.1",
+    "tachyons": "^4.11.1",
+    "tachyons-sass": "^4.9.3"
   }
 }

@@ -15,9 +15,9 @@ background: linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 25%, rgba(
 /////////////////
 
 
-$parts: 30;
-$legs: 1;
-$creatures: 3;
+$parts: 60;
+// $legs: 1;
+// $creatures: 3;
 
 html, body {
 	height: 100%;
@@ -44,7 +44,18 @@ body {
 //******INDIVIDUAL SQUARE PARTS
 .seg {
 //   color: limegreen;
-    color: #60b080;
+    // color: #60b080;
+    //EYEDROPPED FROM CHRISTIAN"S COMP:
+    // color: #146265;
+
+    // 👇CHOSEN COLOR
+    // color: #1a5052;
+    color: white;
+    // opacity: .9;
+    
+    // font-size:11px;
+    font-size:1.1rem;
+
     // color: #1d8387;
     // color: #09594e;
     height: 18px;
@@ -53,6 +64,7 @@ body {
     animation: sway 3s infinite ease-in-out alternate;
 }
 
+// 👇NEED TO BRING BACK
 @keyframes sway {
 	0% {
 		transform: rotate(-20deg) translateX(-5px);
@@ -62,20 +74,68 @@ body {
 	}
 }
 
+// 👇NEED TO BRING BACK
 @for $i from 1 through $parts {
 	.seg:nth-child(#{$i}){
 		animation-delay: $i * -.1s;
 	}
 }
 
+
+.first{
+ position: fixed;
+ bottom: -10px;
+}
+
+
 .second{
-  position: relative;
+  position: fixed;
   left:90px;
-  bottom: 200px;
+  bottom: -10px;
 }
 
 .third{
-  position: relative;
-  left:160px;
-  bottom: 400px;
+    position: fixed;
+    left:180px;
+    bottom: -10px;
+}
+
+
+.fourth{
+    position: fixed;
+    left:270px;
+    bottom: -10px;
+}
+
+
+.fifth{
+    position: fixed;
+    left:360px;
+    bottom: 0px;
+}
+
+.sixth{
+    position: fixed;
+    left:360px;
+    bottom: 0px;
+}
+
+.seventh{
+    position: fixed;
+    left:360px;
+    bottom: 0px;
+}
+
+
+.eighth{
+    position: fixed;
+    left:360px;
+    bottom: 0px;
+}
+
+
+.ninth{
+    position: fixed;
+    left:360px;
+    bottom: 0px;
 }
