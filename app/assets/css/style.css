@@ -628,26 +628,36 @@ html, body {
 .fifth {
   position: fixed;
   left: 360px;
-  bottom: 0px; }
+  bottom: -10px; }
 
 .sixth {
   position: fixed;
-  left: 360px;
-  bottom: 0px; }
+  left: 450px;
+  bottom: -10px; }
 
 .seventh {
   position: fixed;
-  left: 360px;
-  bottom: 0px; }
+  left: 540px;
+  bottom: -10px; }
 
 .eighth {
   position: fixed;
-  left: 360px;
-  bottom: 0px; }
+  left: 630px;
+  bottom: -10px; }
 
 .ninth {
   position: fixed;
-  left: 360px;
+  left: 720px;
+  bottom: 0px; }
+
+.tenth {
+  position: fixed;
+  left: 810px;
+  bottom: 0px; }
+
+.eleventh {
+  position: fixed;
+  left: 900px;
   bottom: 0px; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
