@@ -1,8 +1,81 @@
-.marBot20{
-    margin-bottom: 20px;
-}
+
 html{
     body{
-        background: cyan;
+        // background: lavender;
+        // background: lavenderblush;
+        // background: rgb(2,39,39);
+        // background: linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 33%, rgba(29,131,135,1) 66%, rgba(96,176,128,1) 100%);
+
+        background: rgb(2,39,39);
+background: linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 25%, rgba(29,131,135,1) 75%, rgba(96,176,128,1) 100%);
     }
+}
+
+/////////////////
+/////////////////
+
+
+$parts: 30;
+$legs: 1;
+$creatures: 3;
+
+html, body {
+	height: 100%;
+}
+body {
+	// background: cyan;
+	// perspective: 500px;
+	// overflow: hidden;
+}
+.creature {
+	// position: absolute;
+	// top: 50%;
+	// left: 50%;
+	// height: 30px;
+	// width: 40px;
+}
+
+// @for $i from 1 through $creatures {
+// 	.creature:nth-child(#{$i}){
+// 		animation: swim#{$i} (random(50) + 50s) infinite linear alternate;
+// 	}
+// }
+
+//******INDIVIDUAL SQUARE PARTS
+.seg {
+//   color: limegreen;
+    color: #60b080;
+    // color: #1d8387;
+    // color: #09594e;
+    height: 18px;
+    width: 18px;
+    transform-origin: bottom;
+    animation: sway 3s infinite ease-in-out alternate;
+}
+
+@keyframes sway {
+	0% {
+		transform: rotate(-20deg) translateX(-5px);
+	}
+	50% {
+		transform: rotate(20deg) translateX(5px)
+	}
+}
+
+@for $i from 1 through $parts {
+	.seg:nth-child(#{$i}){
+		animation-delay: $i * -.1s;
+	}
+}
+
+.second{
+  position: relative;
+  left:90px;
+  bottom: 200px;
+}
+
+.third{
+  position: relative;
+  left:160px;
+  bottom: 400px;
 }

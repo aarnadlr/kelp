@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
+    haml = require('gulp-haml'),
+
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
@@ -24,6 +26,9 @@ var banner = [
   '\n'
 ].join('');
 
+
+
+// 1
 gulp.task('css', function () {
     return gulp.src('src/scss/style.scss')
     // .pipe(sourcemaps.init())
@@ -37,7 +42,7 @@ gulp.task('css', function () {
     .pipe(gulp.dest('app/assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
-
+// 2
 gulp.task('js',function(){
   gulp.src('src/js/scripts.js')
     // .pipe(sourcemaps.init())
@@ -53,7 +58,7 @@ gulp.task('js',function(){
     .pipe(gulp.dest('app/assets/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
 });
-
+// 3
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
         notify: false,
@@ -62,12 +67,23 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+// 4
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'browser-sync'], function () {
+// Get one .HAML file and render
+gulp.task('oneHaml', function () {
+    gulp.src('src/haml/index.haml')
+      .pipe(haml())
+      .pipe(gulp.dest('app'));
+});
+
+
+//DEFAULT
+gulp.task('default', ['css', 'js', 'browser-sync', 'oneHaml'], function () {
     gulp.watch("src/scss/**/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
+    gulp.watch("src/haml/*.haml", ['oneHaml']);
     gulp.watch("app/*.html", ['bs-reload']);
 });
