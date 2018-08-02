@@ -14,42 +14,50 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.card{
+    display: inline-block;
+    width:570px;
+    min-height:400px;
+    z-index: 10;
+    padding: 45px;
+    color:#00493f;
+    margin:50px;
+    
+    h1{ 
+        font-size: 2.9rem;
+        font-weight: 400;
+        margin: 0;
+        line-height: .8
+    }
+    p{
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    ul li{
+        font-size: 1.2rem;
+        line-height: 1.6
+    }
+    .download{
+        display:inline-block;
+        border: 1px solid black;
+        padding:6px 16px;
+        margin-bottom: 10px;
+        transition: all .2s ease;
+    }
+    .github{
+        text-decoration: underline;
+    }
+    .getintouch{
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width:530px) {
     .card{
-        display: inline-block;
-        width:570px;
-        min-height:400px;
-        z-index: 10;
-        padding: 45px;
-        color:#00493f;
-        
-        h1{ 
-            font-size: 2.9rem;
-            font-weight: 400;
-            margin: 0;
-            line-height: .8
-        }
-        p{
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        ul li{
-            font-size: 1.2rem;
-            line-height: 1.6
-        }
-        .download{
-            display:inline-block;
-            border: 1px solid black;
-            padding:6px 16px;
-            margin-bottom: 10px;
-            transition: all .2s ease;
-        }
-        .github{
-            text-decoration: underline;
-        }
-        .getintouch{
-            margin-bottom: 0;
-            text-decoration: underline;
-        }
+        margin:10px;
     }
 }
 

@@ -422,35 +422,41 @@ body {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-  .cardContainer .card {
+
+.card {
+  display: inline-block;
+  width: 570px;
+  min-height: 400px;
+  z-index: 10;
+  padding: 45px;
+  color: #00493f;
+  margin: 50px; }
+  .card h1 {
+    font-size: 2.9rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: .8; }
+  .card p {
+    font-size: 1.2rem;
+    line-height: 1.6; }
+  .card ul li {
+    font-size: 1.2rem;
+    line-height: 1.6; }
+  .card .download {
     display: inline-block;
-    width: 570px;
-    min-height: 400px;
-    z-index: 10;
-    padding: 45px;
-    color: #00493f; }
-    .cardContainer .card h1 {
-      font-size: 2.9rem;
-      font-weight: 400;
-      margin: 0;
-      line-height: .8; }
-    .cardContainer .card p {
-      font-size: 1.2rem;
-      line-height: 1.6; }
-    .cardContainer .card ul li {
-      font-size: 1.2rem;
-      line-height: 1.6; }
-    .cardContainer .card .download {
-      display: inline-block;
-      border: 1px solid black;
-      padding: 6px 16px;
-      margin-bottom: 10px;
-      transition: all .2s ease; }
-    .cardContainer .card .github {
-      text-decoration: underline; }
-    .cardContainer .card .getintouch {
-      margin-bottom: 0;
-      text-decoration: underline; }
+    border: 1px solid black;
+    padding: 6px 16px;
+    margin-bottom: 10px;
+    transition: all .2s ease; }
+  .card .github {
+    text-decoration: underline; }
+  .card .getintouch {
+    margin-bottom: 0;
+    text-decoration: underline; }
+
+@media only screen and (max-width: 530px) {
+  .card {
+    margin: 10px; } }
 
 .download:hover {
   -ms-transform: translateY(-4px);
