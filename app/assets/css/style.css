@@ -404,12 +404,11 @@ textarea {
   color: #fff;
   text-shadow: none; }
 
-html body {
-  background: #022727;
-  background: linear-gradient(0deg, #022727 0%, #09594e 25%, #1d8387 75%, #60b080 100%); }
-
 html, body {
   height: 100%; }
+
+body {
+  background: linear-gradient(0deg, #022727 0%, #09594e 25%, #1d8387 75%, #60b080 100%); }
 
 .cardContainer {
   position: relative;
@@ -440,8 +439,6 @@ html, body {
   .card p {
     font-size: 1.2rem;
     line-height: 1.6; }
-  .card p:nth-child(6), .card p:nth-child(7) {
-    text-decoration: underline; }
   .card ul li {
     font-size: 1.2rem;
     line-height: 1.6; }
@@ -451,8 +448,11 @@ html, body {
     padding: 6px 16px;
     margin-bottom: 10px;
     transition: all .2s ease; }
+  .card .github {
+    text-decoration: underline; }
   .card .getintouch {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-decoration: underline; }
 
 @media only screen and (max-width: 630px) {
   .card {

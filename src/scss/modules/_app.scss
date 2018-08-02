@@ -1,26 +1,9 @@
-
-html{
-    body{
-        // background: lavender;
-        // background: lavenderblush;
-        // background: rgb(2,39,39);
-        // background: linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 33%, rgba(29,131,135,1) 66%, rgba(96,176,128,1) 100%);
-
-        background: rgb(2,39,39);
-background: linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 25%, rgba(29,131,135,1) 75%, rgba(96,176,128,1) 100%);
-    }
-}
-
-/////////////////
-/////////////////
-
-
-$parts: 60;
-// $legs: 1;
-// $creatures: 3;
-
 html, body {
 	height: 100%;
+}
+
+body{
+    background: linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 25%, rgba(29,131,135,1) 75%, rgba(96,176,128,1) 100%);
 }
 
 .cardContainer{
@@ -51,10 +34,6 @@ html, body {
         font-size: 1.2rem;
         line-height: 1.6;
     }
-    // p:nth-child(5),
-    p:nth-child(6), p:nth-child(7){
-        text-decoration: underline;
-    }
     ul li{
         font-size: 1.2rem;
         line-height: 1.6
@@ -66,8 +45,12 @@ html, body {
         margin-bottom: 10px;
         transition: all .2s ease;
     }
+    .github{
+        text-decoration: underline;
+    }
     .getintouch{
         margin-bottom: 0;
+        text-decoration: underline;
     }
 }
 
@@ -103,7 +86,7 @@ html, body {
 	}
 }
 
-@for $i from 1 through $parts {
+@for $i from 1 through 60 {
 	.seg:nth-child(#{$i}){
 		animation-delay: $i * -.1s;
 	}
