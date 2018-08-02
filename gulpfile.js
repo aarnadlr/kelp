@@ -72,25 +72,10 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-// Get one .HAML file and render
-// gulp.task('oneHaml', function () {
-//     gulp.src('src/haml/index.haml')
-//       .pipe(haml())
-//       .pipe(gulp.dest('app'));
-// });
-
-// Get and render ALL .HAML files recursively
-gulp.task('multiHaml', function () {
-    gulp.src('src/haml/**/*.haml')
-      .pipe(haml())
-      .pipe(gulp.dest('app'));
-  });
-
 
 //DEFAULT
-gulp.task('default', ['css', 'js', 'browser-sync', 'multiHaml'], function () {
+gulp.task('default', ['css', 'js', 'browser-sync'], function () {
     gulp.watch("src/scss/**/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
-    gulp.watch("src/haml/*.haml", ['multiHaml']);
     gulp.watch("app/*.html", ['bs-reload']);
 });
