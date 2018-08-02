@@ -385,22 +385,22 @@ textarea {
   /* 2 */ }
 
 ::-moz-selection {
-  background: #333;
-  color: #fff;
+  background: #98c4be;
+  color: white;
   text-shadow: none; }
 
 ::selection {
-  background: #333;
-  color: #fff;
+  background: #98c4be;
+  color: white;
   text-shadow: none; }
 
 ::-moz-selection {
-  background: #333;
-  color: #fff;
+  background: #98c4be;
+  color: white;
   text-shadow: none; }
 
 ::-webkit-selection {
-  background: #333;
+  background: #98c4be;
   color: #fff;
   text-shadow: none; }
 
@@ -419,8 +419,8 @@ html, body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   -ms-flex-align: center;
       align-items: center; }
 
@@ -430,7 +430,8 @@ html, body {
   min-height: 400px;
   z-index: 10;
   padding: 45px;
-  color: #00493f; }
+  color: #00493f;
+  margin: 80px; }
   .card h1 {
     font-size: 2.9rem;
     font-weight: 400;
@@ -453,6 +454,10 @@ html, body {
   .card .getintouch {
     margin-bottom: 0; }
 
+@media only screen and (max-width: 630px) {
+  .card {
+    margin: 10px; } }
+
 .download:hover {
   -ms-transform: translateY(-4px);
       transform: translateY(-4px);
@@ -460,7 +465,6 @@ html, body {
   color: white; }
 
 .seg {
-  color: #1a5052;
   color: #0e2c2e;
   opacity: .6;
   font-size: 1.1rem;

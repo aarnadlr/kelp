@@ -22,15 +22,6 @@ $parts: 60;
 html, body {
 	height: 100%;
 }
-body {
-	// background: cyan;
-	// perspective: 500px;
-    // overflow: hidden;
-    // display: flex;
-    // justify-content: center;
-    // // align-content: center;
-    // align-items: center;
-}
 
 .cardContainer{
     position:relative;
@@ -38,24 +29,17 @@ body {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    // align-content: center;
+    justify-content: flex-start;
     align-items: center;
-    // overflow:auto;
 }
 .card{
-    // overflow:auto;
-    // overflow:  scroll;
-    // position:absolute;
-    // flex-wrap: wrap;
     display: inline-block;
     width:570px;
-    // height:430px;
     min-height:400px;
     z-index: 10;
     padding: 45px;
-    // overflow: hidden;
     color:#00493f;
+    margin:80px;
 
     h1{ 
         font-size: 2.9rem;
@@ -87,54 +71,29 @@ body {
     }
 }
 
+@media only screen and (max-width:630px) {
+    .card{
+        margin:10px;
+    }
+}
+
 .download:hover{
     transform: translateY(-4px);
-    // background: #1a5052;
-    // background: #347679;
     background: #498e92;
     color:white;
 }
 
 
-.creature {
-	// position: absolute;
-	// top: 50%;
-	// left: 50%;
-	// height: 30px;
-	// width: 40px;
-}
-
-// @for $i from 1 through $creatures {
-// 	.creature:nth-child(#{$i}){
-// 		animation: swim#{$i} (random(50) + 50s) infinite linear alternate;
-// 	}
-// }
-
-//******INDIVIDUAL SQUARE PARTS
 .seg {
-//   color: limegreen;
-    // color: #60b080;
-    //EYEDROPPED FROM CHRISTIAN"S COMP:
-    // color: #146265;
-
-    // 👇CHOSEN COLOR
-    color: #1a5052;
     color: #0e2c2e;
-    // color: white;
     opacity: .6;
-    
-    // font-size:11px;
     font-size:1.1rem;
-
-    // color: #1d8387;
-    // color: #09594e;
     height: 18px;
     width: 18px;
     transform-origin: bottom;
     animation: sway 3s infinite ease-in-out alternate;
 }
 
-// 👇NEED TO BRING BACK
 @keyframes sway {
 	0% {
 		transform: rotate(-20deg) translateX(-5px);
@@ -144,7 +103,6 @@ body {
 	}
 }
 
-// 👇NEED TO BRING BACK
 @for $i from 1 through $parts {
 	.seg:nth-child(#{$i}){
 		animation-delay: $i * -.1s;
@@ -156,7 +114,6 @@ body {
  position: fixed;
  bottom: -10px;
 }
-
 
 .second{
   position: fixed;
@@ -170,13 +127,11 @@ body {
     bottom: -10px;
 }
 
-
 .fourth{
     position: fixed;
     left:270px;
     bottom: -10px;
 }
-
 
 .fifth{
     position: fixed;
@@ -196,13 +151,11 @@ body {
     bottom: -10px;
 }
 
-
 .eighth{
     position: fixed;
     left:630px;
     bottom: -10px;
 }
-
 
 .ninth{
     position: fixed;
