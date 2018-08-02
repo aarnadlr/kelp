@@ -411,8 +411,58 @@ html body {
 html, body {
   height: 100%; }
 
+.cardContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.card {
+  display: inline-block;
+  width: 570px;
+  min-height: 400px;
+  z-index: 10;
+  padding: 45px;
+  color: #00493f; }
+  .card h1 {
+    font-size: 2.9rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: .8; }
+  .card p {
+    font-size: 1.2rem;
+    line-height: 1.6; }
+  .card p:nth-child(6), .card p:nth-child(7) {
+    text-decoration: underline; }
+  .card ul li {
+    font-size: 1.2rem;
+    line-height: 1.6; }
+  .card .download {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 6px 16px;
+    margin-bottom: 10px;
+    transition: all .2s ease; }
+  .card .getintouch {
+    margin-bottom: 0; }
+
+.download:hover {
+  -ms-transform: translateY(-4px);
+      transform: translateY(-4px);
+  background: #498e92;
+  color: white; }
+
 .seg {
-  color: white;
+  color: #1a5052;
+  color: #0e2c2e;
+  opacity: .6;
   font-size: 1.1rem;
   height: 18px;
   width: 18px;
@@ -658,6 +708,31 @@ html, body {
 .eleventh {
   position: fixed;
   left: 900px;
+  bottom: 0px; }
+
+.twelfth {
+  position: fixed;
+  left: 990px;
+  bottom: 0px; }
+
+.thirteenth {
+  position: fixed;
+  left: 1080px;
+  bottom: 0px; }
+
+.fourteenth {
+  position: fixed;
+  left: 1170px;
+  bottom: 0px; }
+
+.fifteenth {
+  position: fixed;
+  left: 1260px;
+  bottom: 0px; }
+
+.sixteenth {
+  position: fixed;
+  left: 1350px;
   bottom: 0px; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
